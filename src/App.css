@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.image {
+  height: 4.375rem;
+  
+   }  
+   
+   nav{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px 80px;
+    
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  #navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  #navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
   }
-}
+  
+  #navbar li a{
+    margin: 0 1.5rem;
+   text-decoration: none;
+   color: var(--black, #181818);
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2rem;
+  
+  }
+  #navbar li a:hover{
+    color: #703364;
+    font-weight: 700;
+    
+  }
+
+  
+  #underline {
+    
+   border-bottom: 3px solid #703364;  
+   
+  }
+  #mobile {
+    display: none;
+  }
+  
+  #mobile i{
+    color: black;
+    align-items: center;
+  } 
+  .para{
+    display: none;
+  }
+  
+  @media screen and (max-width:700px)
+  {
+    #navbar{
+      display: flex;
+      justify-content:flex-start;
+      align-items:flex-start;
+      position: fixed;
+      flex-direction: column;
+      top:90px ;
+      right: 0px;
+      width:300px ;
+      height:100vh ;
+      background-color:#263238;
+      padding: 40px 0 0 10px;
+      transition: 0.3s ease-in-out;
+    }
+    .image{
+      display: none;
+    }
+  
+    #navbar.active{
+      right: -300px;
+    }
+  
+    #navbar li{
+      margin-bottom: 25px;
+    }
+    #navbar li a{
+      color: white;
+    }
+    #navbar li a:hover{
+      color:  #BA68C8;
+      font-weight: 500;
+      
+    }
+    #underline {
+      
+      border-bottom: 2px solid #BA68C8; 
+      
+     }
+  
+    #mobile{
+      display: block;
+    }
+  
+    #mobile i{
+      font-size: 25px;
+      cursor: pointer;
+    } 
+    .para{
+      display: block;
+  color: #FFF;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 75px;
+  margin-left: 65px;
+    }
+    .img{
+      height: 40px;
+      width: 40px;
+    }
+    .logo{
+      display: flex;
+      flex-direction: row;
+    }
+    #iit{
+      color: #FFF;
+  font-size: 0.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+    }
+  } 
+
+
+
